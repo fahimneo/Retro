@@ -103,5 +103,142 @@
           </div>
         </div>
       </header>
+      <main>
+        <!--banner-->
+        <div
+          class="rounded-3xl hero min-h-[400px] place-items-stretch bg-[#12132D]"
+          style="background-image: url(./images/bgbanner.png)"
+        >
+          <div class="rounded-3xl hero-overlay bg-opacity-20"></div>
+          <div
+            class="hero-content max-w-full justify-around flex-col md:flex-row gap-12 py-24 text-neutral-content"
+          >
+            <div class="max-w-md">
+              <h1 class="mb-5 text-5xl font-bold">
+                Welcome to the
+                <span
+                  class="bg-gradient-to-r from-indigo-500 to-indigo-900 bg-clip-text text-transparent"
+                  >ComoLokko</span
+                >
+                Forum
+              </h1>
+              <p class="mb-5">
+                Share your favorite opinion and win and wp forum coffee mug!.
+              </p>
+              <label
+                class="input pr-1 input-bordered flex items-center rounded-full"
+              >
+                <input
+                  type="text"
+                  class="grow w-full text-black"
+                  placeholder="Search here anything"
+                  id="search"
+                />
+                <span
+                  onclick="getPost(document.getElementById('search').value)"
+                  class="bg-primary cursor-pointer rounded-full px-6 py-2"
+                  >Search</span
+                >
+              </label>
+            </div>
+            <div class="bg-base-100 text-black space-y-3 p-6 rounded-box">
+              <div class="flex justify-between gap-12">
+                <h1>Registered Users</h1>
+                <h1>01</h1>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Forum</h1>
+                <h1>01</h1>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Topics</h1>
+                <h1>01</h1>
+              </div>
+              <div class="flex justify-between gap-12">
+                <h1>Replies</h1>
+                <h1>01</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Discuss-->
+        <div class="py-12">
+          <div class="text-center px-3 sm:px-0 py-12 space-y-6">
+            <h2 class="text-3xl font-bold">Let’s Discuss</h2>
+            <p class="max-w-lg mx-auto text-neutral-500 inter">
+              Discover insightful articles, thought-provoking discussions, and
+              captivating stories in our diverse collection of posts
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row gap-6 justify-between">
+            <div id="posts" class="flex flex-1 flex-col gap-6 w-full"></div>
+            <div class="">
+              <div class="bg-base-200 p-6 space-y-3 rounded-box shadow-xl">
+                <div class="flex gap-32 justify-between">
+                  <h4 class="font-bold">Title</h4>
+                  <div class="flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="text-green-500 w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+
+                    <div class="inter">
+                      Mark as read (<span id="readCounter">0</span>)
+                    </div>
+                  </div>
+                </div>
+                <div id="readPost" class="space-y-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Join forum-->
+        <div
+          class="hero rounded-3xl my-12 min-h-[400px] place-items-stretch bg-[#12132D]"
+        >
+          <div class="hero-overlay rounded-3xl bg-opacity-40"></div>
+          <div
+            class="hero-content max-w-full justify-around flex-col md:flex-row gap-12 py-12 text-neutral-content"
+          >
+            <div class="max-w-lg">
+              <h1 class="mb-5 text-5xl font-bold">Join Our Forum</h1>
+              <p class="mb-5">
+                Join the conversation in our blog's discuss section and share
+                your thoughts, insights, and experiences!
+              </p>
+              <button class="btn btn-primary text-xl">Register Now</button>
+            </div>
+            <div class="">
+              <img src="./images/joinforum.png" />
+            </div>
+          </div>
+        </div>
+
+        <!--latest posts-->
+        <div class="">
+          <div class="text-center px-3 sm:px-0 py-12 space-y-6">
+            <h2 class="text-3xl font-bold">Latest Posts</h2>
+            <p class="max-w-lg mx-auto text-neutral-500">
+              Explore our latest posts covering a variety of topics, from
+              technology and science to lifestyle and entertainment
+            </p>
+          </div>
+          <div
+            id="latestPosts"
+            class="flex flex-wrap gap-6 justify-center"
+          ></div>
+        </div>
+      </main>
 </body>
 </html>
